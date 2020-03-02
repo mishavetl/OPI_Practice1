@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPI_Practice1", "OPI_Practice1.csproj", "{A6593940-E8C7-48EA-B720-8E3145253E5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPI_Practice1Tests", "OPI_Practice1Tests\OPI_Practice1Tests.csproj", "{02A99C94-1B67-4F9A-BEB3-F8D5DB523F43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6593940-E8C7-48EA-B720-8E3145253E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6593940-E8C7-48EA-B720-8E3145253E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6593940-E8C7-48EA-B720-8E3145253E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6593940-E8C7-48EA-B720-8E3145253E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A99C94-1B67-4F9A-BEB3-F8D5DB523F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A99C94-1B67-4F9A-BEB3-F8D5DB523F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A99C94-1B67-4F9A-BEB3-F8D5DB523F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A99C94-1B67-4F9A-BEB3-F8D5DB523F43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
