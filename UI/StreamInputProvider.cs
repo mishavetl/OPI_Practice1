@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using OPI_Practice1.SharedMemory;
+using OPI_Practice1.UI;
 
-namespace OPI_Practice1.UI
+namespace OPI_Practice1.Services
 {
     public class StreamInputProvider : IInputProvider
     {
