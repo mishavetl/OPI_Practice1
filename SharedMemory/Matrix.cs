@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace OPI_Practice1.SharedMemory
 {
@@ -28,7 +29,7 @@ namespace OPI_Practice1.SharedMemory
         
         protected bool Equals(Matrix other)
         {
-            return M == other.M && N == other.N && Equals(Source, other.Source);
+            return M == other.M && N == other.N && Source.Cast<int>().SequenceEqual(other.Source.Cast<int>());
         }
 
         public override bool Equals(object obj)

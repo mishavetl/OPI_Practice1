@@ -9,9 +9,9 @@ namespace OPI_Practice1.Tasks
         
         private IOutputProvider Output { get; }
 
-        private SharedMemoryProvider SharedMemory;
+        private SharedMemoryRepository SharedMemory;
         
-        public InputMatrixTaskExecutor(IInputProvider input, IOutputProvider output, SharedMemoryProvider sharedMemory)
+        public InputMatrixTaskExecutor(IInputProvider input, IOutputProvider output, SharedMemoryRepository sharedMemory)
         {
             Input = input;
             Output = output;
@@ -19,7 +19,17 @@ namespace OPI_Practice1.Tasks
         }
         public void Execute()
         {
-            // SharedMemory.Matrix = Input.GetMatrix();
+            Output.OutputString("n = ");
+            int n = Input.GetN();
+            Output.OutputString("m = ");
+            int m = Input.GetM();
+            Output.OutputString(
+                "Input matrix in form of ("
+                + "a11 a12 a13\n"
+                + "a21 a22 a23\n"
+                + "a31 a32 a33\n"
+                + ")\n ");
+            SharedMemory.Matrix = Input.GetMatrix(n, m);
         }
     }
 }

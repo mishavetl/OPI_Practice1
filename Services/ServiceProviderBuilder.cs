@@ -9,29 +9,35 @@ namespace OPI_Practice1.Services
 {
     public class ServiceProviderBuilder : IInitialServiceProviderBuilder, IServiceProviderBuilderWithInputStream, IPopulatedServiceProviderBuilder
     {
-        private StreamReader InputStream { get; set; }
-        private StreamWriter OutputStream { get; set; }
+        private TextReader InputStream { get; set; }
+        private TextWriter OutputStream { get; set; }
+
+        public static IInitialServiceProviderBuilder construct() {
+            return new ServiceProviderBuilder();
+        }
 
         public ServiceProvider Build()
         {
             return new ServiceCollection()
                 .AddSingleton<Menu, ConsoleMenu>()
-                .AddSingleton<SharedMemoryProvider, SharedMemoryProvider>()
+                .AddSingleton<SharedMemoryRepository, SharedMemoryRepository>()
                 .AddSingleton<TaskManager, TaskManager>()
                 .AddSingleton<IOutputProvider, StreamOutputProvider>(streamOutput =>
                                                                     new StreamOutputProvider(OutputStream))
                 .AddSingleton<IInputProvider, StreamInputProvider>(streamInput =>
                                                                     new StreamInputProvider(InputStream))
+                .AddSingleton<InputMatrixTaskExecutor, InputMatrixTaskExecutor>()
+                .AddSingleton<OutputMatrixTaskExecutor, OutputMatrixTaskExecutor>()
                 .BuildServiceProvider();
         }
 
-        public IServiceProviderBuilderWithInputStream SetInputStream(StreamReader streamReader)
+        public IServiceProviderBuilderWithInputStream SetInputStream(TextReader streamReader)
         {
             InputStream = streamReader;
             return this;
         }
         
-        public IPopulatedServiceProviderBuilder SetOutputStream(StreamWriter streamWriter)
+        public IPopulatedServiceProviderBuilder SetOutputStream(TextWriter streamWriter)
         {
             OutputStream = streamWriter;
             return this;

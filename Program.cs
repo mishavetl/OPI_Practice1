@@ -13,10 +13,11 @@ namespace OPI_Practice1
     {
         static void Main(string[] args)
         {
-            var serviceProvider = new ServiceProviderBuilder()
-                .SetInputStream(new StreamReader(Console.OpenStandardInput()))
-                .SetOutputStream(new StreamWriter(Console.OpenStandardOutput()))
+            var serviceProvider = ServiceProviderBuilder.construct()
+                .SetInputStream(Console.In)
+                .SetOutputStream(Console.Out)
                 .Build();
+            
             serviceProvider.GetService<Menu>().StartLoop();
         }
     }

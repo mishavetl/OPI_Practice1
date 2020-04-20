@@ -15,7 +15,7 @@ namespace OPI_Practice1.Tasks
         }
         public void Execute()
         {
-            throw new System.NotImplementedException();
+            Output.OutputString("");
         }
     }
 }

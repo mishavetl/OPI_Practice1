@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  editor:
+    build: docker/editor
+    volumes:
+      - .:/code
+      - ${PWD}/protected/docker/web/sites-enabled:/etc/apache2/sites-enabled
+      - ${PWD}/protected/.docker/apache2_log:/var/log/apache2
+  sdk:
+    build: docker/sdk
+    volumes:
+      - .:/code

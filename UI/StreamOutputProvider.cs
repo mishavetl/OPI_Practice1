@@ -7,16 +7,16 @@ namespace OPI_Practice1.UI
 {
     public class StreamOutputProvider : IOutputProvider
     {
-        private StreamWriter Writer { get; }
+        private TextWriter Writer { get; }
         
-        public StreamOutputProvider(StreamWriter writer)
+        public StreamOutputProvider(TextWriter writer)
         {
             Writer = writer;
         }
         
         public void OutputString(string output)
         {
-        	Writer.WriteLine(output);
+        	Writer.Write(output);
         }
 
         public void OutputAnswer(Answer answer)
@@ -31,7 +31,14 @@ namespace OPI_Practice1.UI
 
         public void OutputMatrix(Matrix matrix)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < matrix.N; ++i)
+            {
+                for (int j = 0; j < matrix.M; ++j)
+                {
+                    Writer.Write(matrix.Get(i, j) + " ");
+                }
+                Writer.Write("\n");
+            }
         }
     }
 }

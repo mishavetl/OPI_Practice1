@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using OPI_Practice1.SharedMemory;
+using OPI_Practice1.Tasks;
 using OPI_Practice1.UI;
 
 namespace OPI_Practice1.Services
 {
     public class StreamInputProvider : IInputProvider
     {
-        private StreamReader Reader { get; }
+        private TextReader Reader { get; }
         
-        public StreamInputProvider(StreamReader reader)
+        public StreamInputProvider(TextReader reader)
         {
             Reader = reader;
         }
@@ -33,7 +34,7 @@ namespace OPI_Practice1.Services
 
         public Matrix GetMatrix(int n, int m)
         {
-            int[,] source = {};
+            int[,] source = new int[n, m];
             foreach (var i in Enumerable.Range(0, n))
             {
                 string[] numbers = GetString().Split(' ');

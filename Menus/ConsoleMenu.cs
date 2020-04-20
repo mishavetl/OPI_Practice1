@@ -12,7 +12,8 @@ namespace OPI_Practice1.Menus
 
         public override void StartLoop()
         {
-            Output.OutputString("Hello world");
+            Tasks.InputMatrix.Execute();
+            Tasks.OutputMatrix.Execute();
         }
     }
 }

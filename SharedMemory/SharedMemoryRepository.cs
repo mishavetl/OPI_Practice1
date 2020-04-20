@@ -1,6 +1,6 @@
 namespace OPI_Practice1.SharedMemory
 {
-    public class SharedMemoryProvider
+    public class SharedMemoryRepository
     {
         public Matrix Matrix { get; set; }
     }

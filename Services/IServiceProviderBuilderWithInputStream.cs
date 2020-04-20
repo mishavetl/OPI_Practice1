@@ -4,6 +4,6 @@ namespace OPI_Practice1.Services
 {
     public interface IServiceProviderBuilderWithInputStream
     {
-        IPopulatedServiceProviderBuilder SetOutputStream(StreamWriter streamWriter);
+        IPopulatedServiceProviderBuilder SetOutputStream(TextWriter streamWriter);
     }
 }
