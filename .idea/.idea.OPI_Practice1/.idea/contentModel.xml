@@ -31,10 +31,16 @@
         </e>
       </e>
       <e p="Program.cs" t="Include" />
-      <e p="ServiceProviderBuilder.cs" t="Include" />
+      <e p="README.md" t="Include" />
+      <e p="Services" t="Include">
+        <e p="IInitialServiceProviderBuilder.cs" t="Include" />
+        <e p="IPopulatedServiceProviderBuilder.cs" t="Include" />
+        <e p="IServiceProviderBuilderWithInputStream.cs" t="Include" />
+        <e p="ServiceProviderBuilder.cs" t="Include" />
+      </e>
       <e p="SharedMemory" t="Include">
         <e p="Matrix.cs" t="Include" />
-        <e p="SharedMemoryProvider.cs" t="Include" />
+        <e p="SharedMemoryRepository.cs" t="Include" />
       </e>
       <e p="Tasks" t="Include">
         <e p="Answer.cs" t="Include" />
@@ -50,6 +56,15 @@
         <e p="StreamOutputProvider.cs" t="Include" />
       </e>
       <e p="bin" t="ExcludeRecursive" />
+      <e p="docker" t="Include">
+        <e p="editor" t="Include">
+          <e p="Dockerfile" t="Include" />
+        </e>
+        <e p="sdk" t="Include">
+          <e p="Dockerfile" t="Include" />
+        </e>
+      </e>
+      <e p="docker-compose.yml" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp3.1" t="Include">
