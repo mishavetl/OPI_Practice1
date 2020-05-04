@@ -23,12 +23,17 @@ namespace OPI_Practice1.Tasks
             int n = Input.GetN();
             Output.OutputString("m = ");
             int m = Input.GetM();
+            if (n != m)
+            {
+                Output.OutputString("Currently, n should be equal to m\n");
+                return;
+            }
             Output.OutputString(
-                "Input matrix in form of ("
+                "Input matrix in form of (\n"
                 + "a11 a12 a13\n"
                 + "a21 a22 a23\n"
                 + "a31 a32 a33\n"
-                + ")\n ");
+                + ")\n");
             SharedMemory.Matrix = Input.GetMatrix(n, m);
         }
     }

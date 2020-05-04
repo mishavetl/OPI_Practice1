@@ -26,6 +26,8 @@ namespace OPI_Practice1.Services
                                                                     new StreamOutputProvider(OutputStream))
                 .AddSingleton<IInputProvider, StreamInputProvider>(streamInput =>
                                                                     new StreamInputProvider(InputStream))
+                .AddSingleton<MinSumOfMainDiagonalElementsTaskExecutor>()
+                .AddSingleton<MaxSumOfMainDiagonalElementsTaskExecutor>()
                 .AddSingleton<InputMatrixTaskExecutor, InputMatrixTaskExecutor>()
                 .AddSingleton<OutputMatrixTaskExecutor, OutputMatrixTaskExecutor>()
                 .BuildServiceProvider();
